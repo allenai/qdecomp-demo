@@ -62,12 +62,12 @@ function sample(ds_name) {
     var data = {};
     var xhr = new XMLHttpRequest();
     xhr.timeout = 10000;
-    xhr.open("GET", "decompositions_13000.csv", true);
+    xhr.open("GET", "decompositions.csv", true);
     xhr.onload = function() {
         if (xhr.status == 200) {
             var allLines = $.csv.toArrays(xhr.responseText);
             var filteredLines = allLines.filter(line => line[0].startsWith(ds_name));
-            var arr = filteredLines[getRandomInt(1, filteredLines .length-1)];
+            var arr = filteredLines[getRandomInt(1, filteredLines.length-1)];
 
             document.getElementById("input-source").value = arr[1];
 
@@ -91,7 +91,7 @@ function eraseQid() {
 function initPage() {
     var xhr = new XMLHttpRequest();
     xhr.timeout = 10000;
-    xhr.open("GET", "decompositions_13000.csv", true);
+    xhr.open("GET", "decompositions.csv", true);
 
     xhr.onload = function() {
         if (xhr.status == 200) {
