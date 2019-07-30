@@ -1,5 +1,6 @@
 {
     "appName": "qdecomp",
     "httpPort": 1337,
-    "contact": "morp"
+    "contact": "morp",
+    "team": "israel"
 }

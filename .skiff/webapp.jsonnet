@@ -82,6 +82,7 @@ local labels = {
   app: config.appName,
   env: env,
   contact: config.contact,
+  team: config.team
 };
 
 local namespace = {
