@@ -60,9 +60,9 @@ local hosts = [
 
 local replicas = (
   if env == 'prod' then
-    0
+    2
   else
-    0
+    1
 );
 
 // Each app gets it's own namespace
