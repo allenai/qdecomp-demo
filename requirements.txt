@@ -1,1 +1,1 @@
-allennlp==1.0.0
+allennlp==0.8.3
