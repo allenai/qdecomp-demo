@@ -1,7 +1,14 @@
 FROM allennlp/allennlp:v0.8.3
 
 WORKDIR /local
-COPY model.tar.gz /local/
+
+# old CopyNet model from camera ready:
+# COPY model.tar.gz /local/
+
+# new BERT-based CopyNet:
+ADD https://storage.googleapis.com/ai2i/qdecomp_demo/model.tar.gz /local/
+
+
 COPY static/ /local/static/
 ADD ./requirements.txt /local/requirements.txt
 RUN pip3 install -r requirements.txt
