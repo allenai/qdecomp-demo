@@ -1,4 +1,5 @@
-FROM allennlp/allennlp:v0.8.3
+#FROM allennlp/allennlp:v0.8.3
+FROM allennlp/allennlp:v1.0.0rc3
 
 WORKDIR /local
 
