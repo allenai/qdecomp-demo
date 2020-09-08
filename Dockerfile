@@ -5,8 +5,11 @@ WORKDIR /local
 # old CopyNet model from camera ready:
 # COPY model.tar.gz /local/
 
+# add remote CopyNet model from camera ready
+ADD https://storage.googleapis.com/ai2i/qdecomp_demo/old_CopyNet/model.tar.gz /local/
+
 # new BERT-based CopyNet:
-ADD https://storage.googleapis.com/ai2i/qdecomp_demo/model.tar.gz /local/
+#ADD https://storage.googleapis.com/ai2i/qdecomp_demo/model.tar.gz /local/
 
 
 COPY static/ /local/static/
