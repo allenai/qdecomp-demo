@@ -146,7 +146,7 @@ local healthCheck = {
 };
 
 local deployment = {
-  apiVersion: 'extensions/v1beta1',
+  apiVersion: 'apps/v1',
   kind: 'Deployment',
   metadata: {
     labels: labels,
@@ -156,6 +156,7 @@ local deployment = {
   spec: {
     revisionHistoryLimit: 3,
     replicas: replicas,
+    selector: { matchLabels: labels },
     template: {
       metadata: {
         name: fullyQualifiedName,
